@@ -19,6 +19,10 @@ output "subnet_name" {
     value = azurerm_subnet.webserver_subnet.name
 }
 
+output "subnet_id" {
+  value = azurerm_subnet.webserver_subnet.id
+}
+
 output "subnet_address_prefix" {
     value = azurerm_subnet.webserver_subnet.address_prefixes  
 }
