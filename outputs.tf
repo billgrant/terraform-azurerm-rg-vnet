@@ -2,6 +2,10 @@ output "resource_group_name" {
     value = module.resource_group_vnet.resource_group_name
 }
 
+output "resource_group_location" {
+    value = module.resource_group_vnet.resource_group_location
+}
+
 output "vnet_name" {
     value = module.resource_group_vnet.vnet_name
 }
