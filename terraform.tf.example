@@ -1,0 +1,11 @@
+terraform {
+  cloud {
+    organization = "my-org"
+    hostname = "app.terraform.io" # Optional; defaults to app.terraform.io
+
+    workspaces {
+      project = "my-project"
+      name = "my-workspace"
+    }
+  }
+}
