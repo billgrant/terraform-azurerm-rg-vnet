@@ -40,8 +40,8 @@ resource "azurerm_subnet" "webserver_subnet" {
 # Security group to allow inbound webtraffic
 resource "azurerm_network_security_group" "webserver-sg" {
   name                = "webserver-sg-${random_id.webservers_id.hex}"
-  location            = data.tfe_outputs.rgvnet.nonsensitive_values.resource_group_location
-  resource_group_name = data.tfe_outputs.rgvnet.nonsensitive_values.resource_group_name
+  location            = azurerm_resource_group.webservers_rg.location
+  resource_group_name = azurerm_resource_group.webservers_rg.name
 
   security_rule {
     name                       = "webserver-sg-rule-${random_id.webservers_id.hex}"
