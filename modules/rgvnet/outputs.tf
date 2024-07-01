@@ -26,3 +26,7 @@ output "subnet_id" {
 output "subnet_address_prefix" {
     value = azurerm_subnet.webserver_subnet.address_prefixes  
 }
+
+output "security_group_name" {
+    value = azurerm_network_security_group.webserver-sg.name  
+}

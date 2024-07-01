@@ -24,3 +24,7 @@ output "subnet_id" {
 output "subnet_address_prefix" {
   value = module.resource_group_vnet.subnet_address_prefix
 }
+
+output "security_group_name" {
+  value = module.resource_group_vnet.security_group_name  
+}
